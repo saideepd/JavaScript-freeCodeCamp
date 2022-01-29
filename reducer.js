@@ -80,7 +80,9 @@ const count = fruitBasket.reduce((tally, fruit) => {
     return tally;
 }, {});
 
+console.log('Tally using reduce:');
 console.log(count);
+// Tally using reduce:'
 // {
 //     banana: 3,
 //     mango: 2,
@@ -146,3 +148,36 @@ const uniqueColors = colorsData.reduce((allColor, currentColor) => {
 // [ 'blue', 'green', 'black', 'orange', 'red' ]
 console.log('Unique colors:');
 console.log(uniqueColors);
+
+
+// Piping with Reduce
+// Instead of reducing over numbers & functions, we can reduce over functions
+function increment(input) { return input + 1 };
+function decrement(input) { return input - 1 };
+function double(input) { return input * 2 };
+function halve(input) { return input / 2 };
+
+let pipeline = [ increment, double, decrement ];
+
+const pipelineResult = pipeline.reduce((total, func) => {
+    return func(total);
+}, 1);
+
+// 3
+// Initial value = 1
+// Pipeline is reduced for the functiions
+// Increment: 1 + 1 = 2
+// Double: 2 * 2 = 4
+// Decrement: 4 - 1 = 3 
+console.log('Piping with Reduce: ' + pipelineResult);
+
+// Just updating the pipeline functions & using same reduce method as above
+let pipeline2 = [ increment, increment, double, decrement, halve ];
+
+const pipelineResult2 = pipeline2.reduce((total, func) => {
+    return func(total);
+}, 1);
+
+// 2.5
+// 1 + 1 = 2;  2 + 1 = 3;  3 * 2 = 6;  6 - 1 = 5;  5 / 2 = 2.5
+console.log('Piping with Reduce: ' + pipelineResult2);
