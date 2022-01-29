@@ -69,3 +69,80 @@ const doubledAbove30 = nums2.reduce((total, num) => {
 console.log('Doubled Numbers & Filter:');
 console.log(doubledAbove30);
 
+
+// Tally
+const fruitBasket = ['banana', 'mango', 'apple', 'orange', 'grapes', 'mango', 'banana', 'pineapple', 'banana', 'apple', 'sweet lime', 'guava', 'grapes'];
+
+const count = fruitBasket.reduce((tally, fruit) => {
+    // For 1st pass, tally[fruit] to be set to 0 + 1, as tally[fruit] currently doesn't exist
+    // On next passes of same fruit, it is set to tally[fruit] + 1
+    tally[fruit] = (tally[fruit] || 0) + 1;
+    return tally;
+}, {});
+
+console.log(count);
+// {
+//     banana: 3,
+//     mango: 2,
+//     apple: 2,
+//     orange: 1,
+//     grapes: 2,
+//     pineapple: 1,
+//     'sweet lime': 1,
+//     guava: 1
+// }
+
+
+// Flattenning array of arrays with reduce
+const data = [[1, 4, 3, 5], [2, 4, 6], [5, 7, 8, 1]];
+
+const flatArray = data.reduce((previousArray, currentArray) => {
+    return previousArray.concat(currentArray);
+}, []);
+
+// Flat Array:
+// [ 1, 4, 3, 5, 2, 4, 6, 5, 7, 8, 1 ]
+console.log('Flat Array:');
+console.log(flatArray);
+
+
+// Fetch data from complex objects
+// Find colors inside each object
+const colorData = [
+    {a: 'happy', b: 'robin', c: ['blue','green']}, 
+    {a: 'tired', b: 'panther', c: ['green','black','orange','blue']}, 
+    {a: 'sad', b: 'goldfish', c: ['green','red']}
+];
+
+const colors = colorData.reduce((allColor, currentColor) => {
+    currentColor.c.forEach(color => {
+        allColor.push(color);
+    });
+    return allColor;
+}, []);
+
+// All Colors:
+// [ 'blue', 'green', 'green', 'black', 'orange', 'blue', 'green', 'red' ]
+console.log('All Colors:');
+console.log(colors);
+
+// Fetch data from complex objects
+// Find Unique colors inside each object
+const colorsData = [
+    {a: 'happy', b: 'robin', c: ['blue','green']}, 
+    {a: 'tired', b: 'panther', c: ['green','black','orange','blue']}, 
+    {a: 'sad', b: 'goldfish', c: ['green','red']}
+];
+
+const uniqueColors = colorsData.reduce((allColor, currentColor) => {
+    currentColor.c.forEach(color => {
+        if(allColor.indexOf(color) === -1)
+            allColor.push(color);
+    });
+    return allColor;
+}, []);
+
+// Unique colors:
+// [ 'blue', 'green', 'black', 'orange', 'red' ]
+console.log('Unique colors:');
+console.log(uniqueColors);
