@@ -1,4 +1,18 @@
 /**
+ * This is a JavaScript Utilities code
+ * that contains may different helper methods
+ * related to Strings, Arrays, Random Generators,
+ * Type checking, etc.
+ * 
+ * This entire suite of utilities is based on the
+ * blog https://swapnakpanda.hashnode.dev/25-utility-code-for-your-next-javascript-project
+ * 
+ * I've tried to implement similar utility helper methods
+ * along with adding documentation and references links to
+ * JavaScript documentation from MDN Web Docs
+ */
+
+/**
  * Check if input is of number type
  * 
  * Input Type: Any
