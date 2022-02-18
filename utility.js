@@ -14,10 +14,8 @@
 
 /**
  * Check if input is of number type
- * 
- * Input Type: Any
- * 
- * Output Type: Boolean
+ * @param {input} An input value of any type 
+ * @returns Returns True if the input value provided is of Number type, else False
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
  *            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof
@@ -38,10 +36,8 @@ console.log('\n');
 
 /**
  * Check if input value contains a number
- * 
- * Input Type: Any
- * 
- * Output Type: Boolean
+ * @params {input} An input value of any type 
+ * @returns Returns True if the input value provided is a Number, else False
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
  */
@@ -63,10 +59,8 @@ console.log('\n');
 
 /**
  * Check if input is null or, undefined
- * 
- * Input Type: Any
- * 
- * Output Type: Boolean
+ * @params {input} An input value of any type 
+ * @returns Returns True if the input value provided is Nullish like null or undefined, else False
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Glossary/Nullish
  */
@@ -83,12 +77,11 @@ console.log(`"" => ${isNullish("")}`);
 console.log(`false => ${isNullish(false)}`);
 console.log('\n');
 
+
 /**
  * Check is input is falsy
- * 
- * Input Type: Any
- * 
- * Output Type: Boolean
+ * @params {input} An input value of any type 
+ * @returns Returns True if the input value provided is a Falsy value, else False
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Glossary/Falsy
  */
@@ -112,10 +105,8 @@ console.log('\n');
 
 /**
  * Check if input is an Array
- * 
- * Input Type: Any
- * 
- * Output Type: Boolean
+ * @params {input} An input value of any type 
+ * @returns Returns True if the input value provided is a Number, else False
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
  */
@@ -135,10 +126,8 @@ console.log('\n');
 
 /**
  * Check if input is an Empty Object
- * 
- * Input Type: Object
- * 
- * Output Type: Boolean
+ * @params {input} An input value of Object type 
+ * @returns Returns True if the input value provided is of Object type, else False
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
  */
@@ -164,10 +153,8 @@ console.log('\n');
 
 /**
  * Convert first character of each word to uppercase
- * 
- * Input Type: String
- * 
- * Output Type: String
+ * @params {input} An input value of String type 
+ * @returns Returns a String value whose first character of each word in sentence is in Upper Case while rest of the characters are in Lower Case
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
  *            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
@@ -189,10 +176,8 @@ console.log('\n');
 
 /**
  * Convert first character of each sentence to upper case
- * 
- * Input Type: String
- * 
- * Output Type: String
+ * @params {input} An input value of String type 
+ * @returns Returns a String value whose first character of first word in sentence is in Upper Case while rest of the characters are in Lower Case
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
  *            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
@@ -215,10 +200,8 @@ console.log('\n');
 
 /**
  * Reverse a string
- * 
- * Input Type: String
- * 
- * Output Type: String
+ * @params {input} An input value of String type 
+ * @returns Returns a String value in reverse order of original value
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Web/EXSLT/str/split
  *            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
@@ -238,14 +221,8 @@ console.log('\n');
 
 /**
  * Convert number from one base to another
- * 
- * Input Type (1): String
- * 
- * Input Type (2): Number
- * 
- * Input Type (3): Number
- * 
- * Output Type: String
+ * @params {input, base1, base2} An input value of String type, the base / radix of input, the base / radix you want the input to be converted to 
+ * @returns Returns a String value which has been converted from base1 (source) to base2 (target)
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
  */
@@ -261,10 +238,8 @@ console.log('\n');
 
 /**
  * Create and initiatlise an array
- * 
- * Input Type: Number [Length of Array]
- * 
- * Input Type: Number [Default Array]
+ * @params {length, value} An input length value of Number type, a value that needs to be filled in the resulting array
+ * @returns Returns an Array of length filled with the value
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
  */
@@ -280,6 +255,8 @@ console.log('\n');
 
 /**
  * To empty an array
+ * @params {input} An input of Array type
+ * @returns Returns an empty Array without any values
  * 
  * Input Type: Array
  * 
@@ -300,10 +277,8 @@ console.log('\n');
 
 /**
  * Remove blank (falsy) values from an array
- * 
- * Input Type: Array
- * 
- * Output Type: Array
+ * @params {input} An input of Array type containing blank (falsy) values
+ * @returns Returns an Array without any blank (falsy) values
  * 
  * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
  */
@@ -320,7 +295,6 @@ console.log('\n');
 
 /**
  * Remove duplicates from array
- * 
  * @param {Array} input An Input of type Array
  * @returns An array containing only distinct items
  * 
